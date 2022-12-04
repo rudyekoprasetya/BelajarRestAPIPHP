@@ -7,13 +7,18 @@ $alamat=$_POST['alamat'];
 $gender=$_POST['gender'];
 $gaji=$_POST['gaji'];
 
-$query="INSERT INTO tb_pengurus VALUES ('$id','$nama','$alamat','$gender','$gaji')";
+
+$query="INSERT INTO tb_pengurus (id, nama, alamat, gender, gaji) VALUES ('$id', '$nama', '$alamat', '$gender', '$gaji')";
 $result=mysqli_query($con,$query);
 
 $respon=array( //digunakan untuk pesan
-		'response' => 200,
-		'pesan' => 'Data berhasil Masuk'
+	'response' => 200,
+	'pesan' => 'Data berhasil Masuk'
 );
 
+http_response_code(200);
+
 echo json_encode($respon);
+
+
 ?>

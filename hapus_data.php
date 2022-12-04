@@ -9,6 +9,7 @@ $respon=array( //digunakan untuk pesan
 		'response' => 200,
 		'pesan' => 'Data berhasil Dihapus'
 );
+http_response_code(200);
 
 echo json_encode($respon);
 ?>

@@ -15,5 +15,7 @@ $respon=array( //digunakan untuk pesan
 		'pesan' => 'Data berhasil Diubah'
 );
 
+http_response_code(200);
+
 echo json_encode($respon);
 ?>

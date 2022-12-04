@@ -16,8 +16,11 @@ if(isset($_GET['id'])) {
 		'gaji'=>$row['gaji']
 	);
 
-	$hasil[]=$data;
+	$hasil=array(
+		'pengurus' => $data
+	);
 
+	http_response_code(200);
 	echo json_encode($hasil);
 
 } else {
@@ -31,6 +34,10 @@ if(isset($_GET['id'])) {
 		$hasil[]=$row;
 	} while($row=mysqli_fetch_assoc($result));
 
+	$hasil=array(
+		'pengurus' => $hasil
+	);
+	http_response_code(200);
 	echo json_encode($hasil);	
 }
 
