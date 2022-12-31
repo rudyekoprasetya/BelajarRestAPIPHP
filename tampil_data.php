@@ -4,7 +4,7 @@ require_once("config/koneksi.php");
 //mencari data ID tertentu
 if(isset($_GET['id'])) {
 	$id=$_GET['id'];
-	$query="SELECT * FROM tb_pengurus WHERE id='$id'";
+	$query="SELECT * FROM pengurus WHERE id='$id'";
 	$result=mysqli_query($con,$query);
 	$row=mysqli_fetch_assoc($result);
 
@@ -26,7 +26,7 @@ if(isset($_GET['id'])) {
 } else {
 
 	//menampilkan semua data
-	$query="SELECT * FROM tb_pengurus";
+	$query="SELECT * FROM pengurus";
 	$result=mysqli_query($con,$query);
 	$row=mysqli_fetch_assoc($result);
 

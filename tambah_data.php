@@ -8,7 +8,7 @@ $gender=$_POST['gender'];
 $gaji=$_POST['gaji'];
 
 
-$query="INSERT INTO tb_pengurus (id, nama, alamat, gender, gaji) VALUES ('$id', '$nama', '$alamat', '$gender', '$gaji')";
+$query="INSERT INTO pengurus (id, nama, alamat, gender, gaji) VALUES ('$id', '$nama', '$alamat', '$gender', '$gaji')";
 $result=mysqli_query($con,$query);
 
 $respon=array( //digunakan untuk pesan
