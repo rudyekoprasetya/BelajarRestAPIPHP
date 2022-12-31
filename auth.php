@@ -22,7 +22,7 @@ if(mysqli_num_rows($result) > 0) {
 		  'response' => 401,
 		  'isLogin' => false
     );
-    http_response_code(200);
+    http_response_code(401);
     echo json_encode($respon);
 }
 ?>
